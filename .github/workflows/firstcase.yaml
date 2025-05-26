@@ -13,7 +13,7 @@ jobs:
 
       - name: Replace 'tag 1' with 'tag 2'
         run: |
-          sed -i 's/tag 1/tag 2/g' /case-study/Tagfile.txt 
+          sed -i 's/tag 1/tag 2/g' /Tagfile.txt 
           
       - name: Print updated file
         run: |
