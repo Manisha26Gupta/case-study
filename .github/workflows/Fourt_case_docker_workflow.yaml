@@ -1,0 +1,22 @@
+name: Build and Push Docker Image
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Log in to GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u manisha26gupta --password-stdin
+
+      - name: Build image
+        run: docker build -f Dockerfile -t ghcr.io/manisha26gupta/Imagetag:v1 .
+
+      - name: Push image
+        run: docker push ghcr.io/manisha26gupta/Imagetag:latest
+
