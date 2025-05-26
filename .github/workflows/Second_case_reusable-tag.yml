@@ -19,6 +19,6 @@ jobs:
         run: |
           sed -i 's/tag 1/tag 2/g' "${{ inputs.file-path }}"
 
-      - name: show modified file
+      - name: Print updated file
         run: |
           cat "${{ inputs.file-path }}"
