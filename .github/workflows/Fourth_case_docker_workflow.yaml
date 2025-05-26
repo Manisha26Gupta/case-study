@@ -15,7 +15,7 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u manisha26gupta --password-stdin
 
       - name: Build image
-        run: docker build -f Dockerfile -t ghcr.io/manisha26gupta/Imagetag:v1 .
+        run: docker build -f Dockerfile -t ghcr.io/manisha26gupta/imagetag:v1 .
 
       - name: Push image
         run: docker push ghcr.io/manisha26gupta/imagetag:latest
