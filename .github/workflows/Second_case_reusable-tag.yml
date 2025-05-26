@@ -1,0 +1,24 @@
+name: Reusable Tag Workflow
+
+on:
+  workflow_call:
+    inputs:
+      file-path:
+        required: true
+        type: string
+
+jobs:
+  tagupdate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Replace 'tag 1' with 'tag 2'
+        run: |
+          sed -i 's/tag 1/tag 2/g' "${{ inputs.file-path }}"
+
+      - name: show modified file
+        run: |
+          cat "${{ inputs.file-path }}"

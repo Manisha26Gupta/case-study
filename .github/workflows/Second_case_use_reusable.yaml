@@ -1,0 +1,10 @@
+name: Use Reusable Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tag-update:
+    uses: ./.github/workflows/reusable-update-tag.yml
+    with:
+      file-path: ./Tagfile.txt
