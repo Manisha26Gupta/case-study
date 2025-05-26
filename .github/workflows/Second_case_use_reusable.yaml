@@ -1,4 +1,4 @@
-name: Use Reusable Workflow
+name: Second case Use Reusable Workflow
 
 on:
   workflow_dispatch:
