@@ -1,4 +1,4 @@
-name: Reusable Workflow Third Case
+name: Third Case Reusable Workflow Third Case
 
 on:
   workflow_call:
