@@ -17,4 +17,4 @@ jobs:
           
       - name: Print updated file
         run: |
-          cat path/to/yourfile.txt
+          cat ./Tagfile.txt 
