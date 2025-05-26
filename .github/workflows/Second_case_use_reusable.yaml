@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  tag-update:
-    uses: ./.github/workflows/Second_case_reusable-tag.yml
+  tagupdate:
+    uses: ./.github/workflows/Second_case_reusable-tag.yaml
     with:
       file-path: ./Tagfile.txt

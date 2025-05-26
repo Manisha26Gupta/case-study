@@ -1,0 +1,30 @@
+name: Reusable Workflow Third Case
+
+on:
+  workflow_call:
+    inputs:
+      file-path:
+        required: true
+        type: string
+
+jobs:
+  update-and-commit-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Replace 'tag 1' with 'tag 2'
+        run: |
+          sed -i 's/tag 1/tag 2/g' "${{ inputs.file-path }}"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add "${{ inputs.file-path }}"
+          git commit -m "Update tag 1 to tag 2"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

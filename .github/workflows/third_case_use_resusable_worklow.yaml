@@ -1,0 +1,10 @@
+name: Third Case Use Reusable Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-tag:
+    uses: ./.github/workflows/third_case_resuable_workflow.yaml
+    with:
+      file-path: ./Tagfile.txt
