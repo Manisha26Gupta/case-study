@@ -28,7 +28,8 @@ And this template simply calls the reusable template third_case_use_resusable_wo
   * Upload the Docker container to ghcr.io after the changes have been committed, also employing the GITHUB_TOKEN secret for authentication.
 
 - Created a simple docker file with the name Dockerfile, where it is using my text file.
-- Then created a workflow with the name Fourth_case_docker_workflow.yaml to create, build, and push an image to the repo.  
+- Then created a workflow with the name Fourth_case_docker_workflow.yaml to create, build, and push an image to the repo.
+- This is the path where the image is pushed https://github.com/manisha26gupta/case-study/pkgs/container/imagetag
    
     
 
