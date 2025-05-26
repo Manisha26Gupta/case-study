@@ -1,0 +1,20 @@
+name: First Case
+
+on:
+  workflow_dispatch:
+
+jobs:
+  modify-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Replace 'tag 1' with 'tag 2'
+        run: |
+          sed -i 's/tag 1/tag 2/g' /case-study/Tagfile.txt 
+          
+      - name: Print updated file
+        run: |
+          cat path/to/yourfile.txt
